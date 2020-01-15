@@ -54,9 +54,11 @@ int main()
         glLoadIdentity();
         glOrtho(-ratio, ratio, -1.0, 1.0, 1.0, -1.0);
 
-        // Draw pyramid
+        // Set current matrix stack to modelview
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
+
+        // Draw triangle
         glRotatef(static_cast<float>(glfwGetTime()) * 50.0, 0.0, 0.0, 1.0);
         glBegin(GL_TRIANGLES);
         {
