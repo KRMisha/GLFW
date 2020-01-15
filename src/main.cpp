@@ -40,10 +40,10 @@ int main()
     while (!glfwWindowShouldClose(window))
     {
         // Get window characteristics
-        float ratio;
-        int width, height;
+        int width;
+        int height;
         glfwGetFramebufferSize(window, &width, &height);
-        ratio = static_cast<float>(width) / height;
+        float ratio = static_cast<float>(width) / height;
 
         // Set viewport and clear buffer
         glViewport(0, 0, width, height);
